@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="W3NB7zFVGk6SFh92LbmlFw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lnf.agevole.com/Sbi.Web.Client.Binder.Prod/webapp/app/main.html" CVScreenId="2f0c30c8-234f-42fe-99ce-227bb3fc365b" CvElementArea="243, 734, 36, 21" CvType="InputBox" DesignTimeRectangle="8, 735, 58, 18" ElementType="DropDown" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='listbox' tag='SPAN' /&gt;" Guid="1483665c-62e9-4949-96ee-0aef49047a1a" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Agevole Web LNF' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="11, 781, 53, 26" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl aria-role='option' class='k-item' type='' tag='LI' aaname='50' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='50' /&gt;" Guid="b602fc6a-ea69-4630-9dfe-df8491ae2d38" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="04f43dfe1e8c853ca303666de7410f6a.png" xmlns="">0bjg0JOv8J0WQVsGZvDHzCA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

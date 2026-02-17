@@ -1,0 +1,116 @@
+{
+  "Value": {
+    "Framework/Process.xaml": [
+      {
+        "IsEnabled": false,
+        "Annotation": null,
+        "Id": "8625c2db-c5a0-4816-a0a7-5a1f087b9621",
+        "ActivityIdRef": "TypeInto_8",
+        "ActivityId": "1.9837",
+        "ActivityName": "Type Into",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "139ebee9-0596-412e-a3b3-1022aa3979c6",
+        "ActivityIdRef": "Throw_6",
+        "ActivityId": "1.9423",
+        "ActivityName": "Throw SysExc fattura non filtrata",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "6078e4b6-2f59-4e6d-8d7b-75d091c37812",
+        "ActivityIdRef": "Throw_9",
+        "ActivityId": "1.6758",
+        "ActivityName": "Throw BRE Ordine non presente",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "0fd74347-46d0-4dab-88e3-e20b92c328a8",
+        "ActivityIdRef": "Throw_1",
+        "ActivityId": "1.5804",
+        "ActivityName": "Throw BRE Ordine aperto errato",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "74a0129e-ce05-4659-a480-01ece4965be5",
+        "ActivityIdRef": "Throw_3",
+        "ActivityId": "1.4665",
+        "ActivityName": "Throw BRE Sezionale",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": false,
+        "Annotation": null,
+        "Id": "c0f51282-8c4e-43dd-8369-e1d04c74e709",
+        "ActivityIdRef": "Click_22",
+        "ActivityId": "1.4155",
+        "ActivityName": "Click Contabilizza",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "230833ea-417f-44a4-bb41-0b6e86b483f9",
+        "ActivityIdRef": "Throw_5",
+        "ActivityId": "1.2913",
+        "ActivityName": "Throw BRE Import Ritenuta",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "b135b1bf-852b-4252-89b2-a1faa0173593",
+        "ActivityIdRef": "If_36",
+        "ActivityId": "1.953",
+        "ActivityName": "If sbilancio negativo o positivo",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "131fc4ff-13e5-4884-afbf-c7159f944fe2",
+        "ActivityIdRef": "Throw_8",
+        "ActivityId": "1.840",
+        "ActivityName": "Throw BRE Sbilancio",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "a53f3d27-acce-4d30-9d78-bd790cb14069",
+        "ActivityIdRef": "Throw_7",
+        "ActivityId": "1.301",
+        "ActivityName": "Throw SystemExc",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "6c07e6cd-a98a-4e51-9618-4a8e7e31f985",
+        "ActivityIdRef": "Throw_2",
+        "ActivityId": "1.197",
+        "ActivityName": "Throw SysExc Registro Acquisti non aperto",
+        "IsTransient": false
+      }
+    ],
+    "Main.xaml": [
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "08ac50b8-b1df-4f08-a9c9-04b33c1d27c1",
+        "ActivityIdRef": "Comment_2",
+        "ActivityId": "1.1105",
+        "ActivityName": "Comment test sdi",
+        "IsTransient": false
+      }
+    ]
+  }
+}

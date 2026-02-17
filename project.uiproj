@@ -1,0 +1,6 @@
+{
+  "Name": "02_Registrazione_Fatture",
+  "ProjectType": "Process",
+  "Description": "Robotic Enterprise Framework per registrazione fatture in agevole",
+  "MainFile": "Main.xaml"
+}

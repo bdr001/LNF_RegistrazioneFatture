@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Agevole Web LNF",
+  "Type": "Screen",
+  "Id": "eH77OGRQ-Ua3KK6JTq90lg",
+  "Reference": "M97BHp7V1EmW3dZeBM818g/eH77OGRQ-Ua3KK6JTq90lg",
+  "ParentRef": "M97BHp7V1EmW3dZeBM818g/LLjfURAWWkeM9MEeX39g4w",
+  "Created": "2025-09-29T14:49:58.471165Z",
+  "Updated": "2025-09-29T14:49:58.471165Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
