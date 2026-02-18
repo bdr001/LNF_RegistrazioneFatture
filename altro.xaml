@@ -90,11 +90,17 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="altro" sap:VirtualizedContainerService.HintSize="1195,469.65666666666664" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="altro" sap:VirtualizedContainerService.HintSize="1110,849.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Window" Name="appDettaglio" />
       <Variable x:TypeArguments="x:String" Name="textNOrdi" />
       <Variable x:TypeArguments="x:String" Name="strTestoPdf" />
+      <Variable x:TypeArguments="x:String" Name="ImportoCassa">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">9999,99</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="ImportoCassaCheck" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -283,7 +289,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DeselectAfter="True" DisplayName="Type Into Cassa previdenziale" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,179" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="43,13">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DeselectAfter="True" DisplayName="Type Into Cassa previdenziale" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,188" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[ImportoCassa]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f553224d-5d35-4601-9e7d-40211a069d70" InformativeScreenshot="e1d5183c8420b2e58038866c47882bc3" Selector="&lt;html app='msedge.exe' title='Agevole Web LNF' url='https://lnf.agevole.com/Sbi.Web.Client.Binder.Prod/webapp/app/main.html?page=S000000261*' /&gt;&lt;webctrl aaname='*Cassa*' aria-role='spinbutton' tag='INPUT' type='text' idx='1' /&gt;">
           <ui:Target.TimeoutMS>
@@ -301,5 +307,34 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
+    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="450,237" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+      <ui:GetAttribute.Result>
+        <OutArgument x:TypeArguments="x:String">[ImportoCassaCheck]</OutArgument>
+      </ui:GetAttribute.Result>
+      <ui:GetAttribute.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c6fb5b0-fae9-4833-b3b3-c9560f471581" InformativeScreenshot="202289d38b232fc600e5e186d2538a4f" Selector="&lt;html app='msedge.exe' title='Agevole Web LNF' url='https://lnf.agevole.com/Sbi.Web.Client.Binder.Prod/webapp/app/main.html?page=S000000261*' /&gt;&lt;webctrl aaname='*Cassa*' aria-role='spinbutton' tag='INPUT' type='text' idx='1' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:GetAttribute.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetAttribute>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Importo cassa inserito: &quot;+ ImportoCassaCheck]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>

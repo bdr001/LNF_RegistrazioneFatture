@@ -179,7 +179,7 @@
       <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1195,470" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1110,850" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -659,9 +659,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="232,121" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="638,3455" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="592,4004" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="592,3031" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -669,7 +669,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="590,3686" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="590,2713" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -690,10 +690,10 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </Assign>
-                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="556,1237" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="556,102" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
@@ -1039,7 +1039,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:InvokeWorkflowFile>
-                              <If Condition="[TransactionNumber=1 and str_FileReport is Nothing]" DisplayName="If TransactionNumber=1" sap:VirtualizedContainerService.HintSize="556,2108" sap2010:WorkflowViewState.IdRef="If_15">
+                              <If Condition="[TransactionNumber=1 and str_FileReport is Nothing]" DisplayName="If TransactionNumber=1" sap:VirtualizedContainerService.HintSize="556,2270" sap2010:WorkflowViewState.IdRef="If_15">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1047,7 +1047,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,1888" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="554,2050" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Boolean" Name="boolReporExists" />
                                     </Sequence.Variables>
@@ -1056,7 +1056,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Scrivo intestazioni report&quot;]">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="520,57" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Scrivo intestazioni report&quot;]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1064,7 +1064,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:LogMessage>
-                                    <Assign DisplayName="Assign file report" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Assign_31">
+                                    <Assign DisplayName="Assign file report" sap:VirtualizedContainerService.HintSize="520,57" sap2010:WorkflowViewState.IdRef="Assign_31">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[str_FileReport]</OutArgument>
                                       </Assign.To>
@@ -1078,7 +1078,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </Assign>
-                                    <Sequence DisplayName="Download transaction Data" sap:VirtualizedContainerService.HintSize="450,1609" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                    <Sequence DisplayName="Download transaction Data" sap:VirtualizedContainerService.HintSize="520,1771" sap2010:WorkflowViewState.IdRef="Sequence_37">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="s:String[]" Name="arr_sediDaLavorare" />
                                         <Variable x:TypeArguments="si:FileInfo" Name="file_TransactiondData" />
@@ -1089,7 +1089,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get_risposte_email - Invoke Workflow File (Get_risposte_email.xaml)" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="Get_risposte_email.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get_risposte_email - Invoke Workflow File (Get_risposte_email.xaml)" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="Get_risposte_email.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtSezionali">[dt_Sezionali]</OutArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
@@ -1100,7 +1100,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeWorkflowFile>
-                                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Agevole Web LNF" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[Browser]" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[Browser]" ScopeGuid="4a993b31-f5e5-4ca9-818e-ef23d9e9ffcb" Version="V2">
+                                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Agevole Web LNF" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[Browser]" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[Browser]" ScopeGuid="4a993b31-f5e5-4ca9-818e-ef23d9e9ffcb" Version="V2">
                                         <uix:NApplicationCard.Body>
                                           <ActivityAction x:TypeArguments="x:Object">
                                             <ActivityAction.Argument>
@@ -1137,7 +1137,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </uix:NApplicationCard>
-                                      <ui:FilterDataTable DataTable="[dt_TransactionData]" DisplayName="Filter Data Table checked" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_TransactionData]" SelectColumnsMode="Remove">
+                                      <ui:FilterDataTable DataTable="[dt_TransactionData]" DisplayName="Filter Data Table checked" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_TransactionData]" SelectColumnsMode="Remove">
                                         <ui:FilterDataTable.Filters>
                                           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                             <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -1162,7 +1162,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:FilterDataTable>
-                                      <ui:FilterDataTable DataTable="[dt_SediDaElaborare]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dt_SediDaElaborare]" SelectColumnsMode="Remove">
+                                      <ui:FilterDataTable DataTable="[dt_SediDaElaborare]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dt_SediDaElaborare]" SelectColumnsMode="Remove">
                                         <ui:FilterDataTable.Filters>
                                           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                             <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -1187,7 +1187,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:FilterDataTable>
-                                      <Assign DisplayName="Assign arr sedi da lavorare" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_33">
+                                      <Assign DisplayName="Assign arr sedi da lavorare" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="Assign_33">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="s:String[]">[arr_sediDaLavorare]</OutArgument>
                                         </Assign.To>
@@ -1201,7 +1201,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </Assign>
-                                      <Assign DisplayName="Filter transaction data con sedi da lavorare" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_35">
+                                      <Assign DisplayName="Filter transaction data con sedi da lavorare" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="Assign_35">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="sd:DataTable">[dt_TransactionData]</OutArgument>
                                         </Assign.To>
@@ -1217,7 +1217,7 @@ Select row).CopyToDataTable()]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </Assign>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_data_esecuzione" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_data_esecuzione" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1225,7 +1225,7 @@ Select row).CopyToDataTable()]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_colore" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_11">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_colore" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_11">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1233,7 +1233,7 @@ Select row).CopyToDataTable()]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_attività" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_attività" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1241,7 +1241,7 @@ Select row).CopyToDataTable()]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_natura_operazioni" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_8">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_natura_operazioni" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_8">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1249,7 +1249,7 @@ Select row).CopyToDataTable()]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_sezionale" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_sezionale" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1257,7 +1257,7 @@ Select row).CopyToDataTable()]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_sbilancio" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_sbilancio" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1265,7 +1265,7 @@ Select row).CopyToDataTable()]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_protocollo" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_9">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_protocollo" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_9">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1273,7 +1273,7 @@ Select row).CopyToDataTable()]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_aliquota_IVA" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_13">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_aliquota_IVA" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_13">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1281,7 +1281,7 @@ Select row).CopyToDataTable()]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_esito" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_12">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Robot_esito" DataTable="[dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_12">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1289,7 +1289,7 @@ Select row).CopyToDataTable()]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <Assign sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_36">
+                                      <Assign sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="Assign_36">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="sd:DataTable">[dt_TransactionData]</OutArgument>
                                         </Assign.To>
@@ -1331,65 +1331,76 @@ dt_TransactionData.Columns("Robot_esito").ColumnName)]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </Assign>
-                                      <ui:Comment DisplayName="Comment test sdi" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// REMOVE FOR PROD&#xA;" />
-                                      <ui:FilterDataTable DataTable="[dt_TransactionData]" DisplayName="Filter Data Table TEST" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,195" sap2010:WorkflowViewState.IdRef="FilterDataTable_24" OutputDataTable="[dt_TransactionData]" SelectColumnsMode="Remove">
-                                        <ui:FilterDataTable.Filters>
-                                          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="8">
-                                            <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                                              <ui:FilterOperationArgument.Column>
-                                                <InArgument x:TypeArguments="x:String">["sdi"]</InArgument>
-                                              </ui:FilterOperationArgument.Column>
-                                              <ui:FilterOperationArgument.Operand>
-                                                <InArgument x:TypeArguments="x:String">["16554094975"]</InArgument>
-                                              </ui:FilterOperationArgument.Operand>
-                                            </ui:FilterOperationArgument>
-                                            <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
-                                              <ui:FilterOperationArgument.Column>
-                                                <InArgument x:TypeArguments="x:String">["sdi"]</InArgument>
-                                              </ui:FilterOperationArgument.Column>
-                                              <ui:FilterOperationArgument.Operand>
-                                                <InArgument x:TypeArguments="x:String">["16555669578"]</InArgument>
-                                              </ui:FilterOperationArgument.Operand>
-                                            </ui:FilterOperationArgument>
-                                            <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
-                                              <ui:FilterOperationArgument.Column>
-                                                <InArgument x:TypeArguments="x:String">["sdi"]</InArgument>
-                                              </ui:FilterOperationArgument.Column>
-                                              <ui:FilterOperationArgument.Operand>
-                                                <InArgument x:TypeArguments="x:String">["16556966765"]</InArgument>
-                                              </ui:FilterOperationArgument.Operand>
-                                            </ui:FilterOperationArgument>
-                                            <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
-                                              <ui:FilterOperationArgument.Column>
-                                                <InArgument x:TypeArguments="x:String">["sdi"]</InArgument>
-                                              </ui:FilterOperationArgument.Column>
-                                              <ui:FilterOperationArgument.Operand>
-                                                <InArgument x:TypeArguments="x:String">["16576525452"]</InArgument>
-                                              </ui:FilterOperationArgument.Operand>
-                                            </ui:FilterOperationArgument>
-                                            <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
-                                              <ui:FilterOperationArgument.Column>
-                                                <InArgument x:TypeArguments="x:String">["sdi"]</InArgument>
-                                              </ui:FilterOperationArgument.Column>
-                                              <ui:FilterOperationArgument.Operand>
-                                                <InArgument x:TypeArguments="x:String">["16579828011"]</InArgument>
-                                              </ui:FilterOperationArgument.Operand>
-                                            </ui:FilterOperationArgument>
-                                          </scg:List>
-                                        </ui:FilterDataTable.Filters>
-                                        <ui:FilterDataTable.SelectColumns>
-                                          <scg:List x:TypeArguments="InArgument" Capacity="4">
-                                            <x:Null />
-                                          </scg:List>
-                                        </ui:FilterDataTable.SelectColumns>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:FilterDataTable>
-                                      <If Condition="[Convert.ToInt32(Config(&quot;limit&quot;).ToString) &gt; 0]" DisplayName="If limit" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="If_18">
+                                      <ui:Comment DisplayName="Comment test sdi" sap:VirtualizedContainerService.HintSize="486,89" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// REMOVE FOR PROD&#xA;" />
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,357" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:FilterDataTable DataTable="[dt_TransactionData]" DisplayName="Filter Data Table TEST" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="FilterDataTable_24" OutputDataTable="[dt_TransactionData]" SelectColumnsMode="Remove">
+                                              <ui:FilterDataTable.Filters>
+                                                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="8">
+                                                  <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                                    <ui:FilterOperationArgument.Column>
+                                                      <InArgument x:TypeArguments="x:String">["sdi"]</InArgument>
+                                                    </ui:FilterOperationArgument.Column>
+                                                    <ui:FilterOperationArgument.Operand>
+                                                      <InArgument x:TypeArguments="x:String">["16554094975"]</InArgument>
+                                                    </ui:FilterOperationArgument.Operand>
+                                                  </ui:FilterOperationArgument>
+                                                  <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                                                    <ui:FilterOperationArgument.Column>
+                                                      <InArgument x:TypeArguments="x:String">["sdi"]</InArgument>
+                                                    </ui:FilterOperationArgument.Column>
+                                                    <ui:FilterOperationArgument.Operand>
+                                                      <InArgument x:TypeArguments="x:String">["16555669578"]</InArgument>
+                                                    </ui:FilterOperationArgument.Operand>
+                                                  </ui:FilterOperationArgument>
+                                                  <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                                                    <ui:FilterOperationArgument.Column>
+                                                      <InArgument x:TypeArguments="x:String">["sdi"]</InArgument>
+                                                    </ui:FilterOperationArgument.Column>
+                                                    <ui:FilterOperationArgument.Operand>
+                                                      <InArgument x:TypeArguments="x:String">["16556966765"]</InArgument>
+                                                    </ui:FilterOperationArgument.Operand>
+                                                  </ui:FilterOperationArgument>
+                                                  <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                                                    <ui:FilterOperationArgument.Column>
+                                                      <InArgument x:TypeArguments="x:String">["sdi"]</InArgument>
+                                                    </ui:FilterOperationArgument.Column>
+                                                    <ui:FilterOperationArgument.Operand>
+                                                      <InArgument x:TypeArguments="x:String">["16576525452"]</InArgument>
+                                                    </ui:FilterOperationArgument.Operand>
+                                                  </ui:FilterOperationArgument>
+                                                  <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                                                    <ui:FilterOperationArgument.Column>
+                                                      <InArgument x:TypeArguments="x:String">["sdi"]</InArgument>
+                                                    </ui:FilterOperationArgument.Column>
+                                                    <ui:FilterOperationArgument.Operand>
+                                                      <InArgument x:TypeArguments="x:String">["16579828011"]</InArgument>
+                                                    </ui:FilterOperationArgument.Operand>
+                                                  </ui:FilterOperationArgument>
+                                                </scg:List>
+                                              </ui:FilterDataTable.Filters>
+                                              <ui:FilterDataTable.SelectColumns>
+                                                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                                  <x:Null />
+                                                </scg:List>
+                                              </ui:FilterDataTable.SelectColumns>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:FilterDataTable>
+                                          </Sequence>
+                                        </ui:CommentOut.Body>
+                                      </ui:CommentOut>
+                                      <If Condition="[Convert.ToInt32(Config(&quot;limit&quot;).ToString) &gt; 0]" DisplayName="If limit" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="If_18">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1430,7 +1441,7 @@ dt_TransactionData.Columns("Robot_esito").ColumnName)]</InArgument>
                                           </Sequence>
                                         </If.Else>
                                       </If>
-                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Assign Sezionale from email response&#xA;" DataTable="[dt_TransactionData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="416,102" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Assign Sezionale from email response&#xA;" DataTable="[dt_TransactionData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="486,102" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                                         <ui:ForEachRow.Body>
                                           <ActivityAction x:TypeArguments="sd:DataRow">
                                             <ActivityAction.Argument>
@@ -1497,7 +1508,7 @@ dt_TransactionData.Columns("Robot_esito").ColumnName)]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:ForEachRow>
-                                      <ui:PathExists Resource="{x:Null}" DisplayName="Get Local File or Folder" Exists="[boolReporExists]" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[str_FileReport]" PathType="File">
+                                      <ui:PathExists Resource="{x:Null}" DisplayName="Get Local File or Folder" Exists="[boolReporExists]" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[str_FileReport]" PathType="File">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1505,7 +1516,7 @@ dt_TransactionData.Columns("Robot_esito").ColumnName)]</InArgument>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:PathExists>
-                                      <If Condition="[boolReporExists=False]" DisplayName="If boolReporExists=False" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="If_17">
+                                      <If Condition="[boolReporExists=False]" DisplayName="If boolReporExists=False" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="If_17">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1539,7 +1550,7 @@ dt_TransactionData.Columns("Robot_esito").ColumnName)]</InArgument>
                                           </Sequence>
                                         </If.Else>
                                       </If>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;Transaction data estratta, numero righe: &quot; + dt_TransactionData.RowCount.ToString]">
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,48" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;Transaction data estratta, numero righe: &quot; + dt_TransactionData.RowCount.ToString]">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
