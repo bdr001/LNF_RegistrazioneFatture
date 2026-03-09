@@ -165,7 +165,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1078,10427" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1078,10622" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="boolOrdineExists" />
       <Variable x:TypeArguments="x:Double" Name="douTolleranza" />
@@ -879,7 +879,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
-    <If Condition="[boolDaRegistrare]" DisplayName="If da registrare" sap:VirtualizedContainerService.HintSize="664,7803" sap2010:WorkflowViewState.IdRef="If_16">
+    <If Condition="[boolDaRegistrare]" DisplayName="If da registrare" sap:VirtualizedContainerService.HintSize="664,7998" sap2010:WorkflowViewState.IdRef="If_16">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -887,7 +887,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="662,7639" sap2010:WorkflowViewState.IdRef="Sequence_75">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="662,7834" sap2010:WorkflowViewState.IdRef="Sequence_75">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="boolChiedereViaMail" />
           </Sequence.Variables>
@@ -897,7 +897,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:FilterDataTable DataTable="[in_dt_PiccoliAcquistiSede]" DisplayName="Filter Data Table Piccoli Acquisti Sede" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="628,57" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[in_dt_PiccoliAcquistiSede]" SelectColumnsMode="Remove">
+          <ui:FilterDataTable DataTable="[in_dt_PiccoliAcquistiSede]" DisplayName="Filter Data Table Piccoli Acquisti Sede" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="628,195" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[in_dt_PiccoliAcquistiSede]" SelectColumnsMode="Remove">
             <ui:FilterDataTable.Filters>
               <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                 <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -906,14 +906,6 @@
                   </ui:FilterOperationArgument.Column>
                   <ui:FilterOperationArgument.Operand>
                     <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("n_doc").ToString]</InArgument>
-                  </ui:FilterOperationArgument.Operand>
-                </ui:FilterOperationArgument>
-                <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                  <ui:FilterOperationArgument.Column>
-                    <InArgument x:TypeArguments="x:String">["DataFattura"]</InArgument>
-                  </ui:FilterOperationArgument.Column>
-                  <ui:FilterOperationArgument.Operand>
-                    <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("data_ricezione").ToString]</InArgument>
                   </ui:FilterOperationArgument.Operand>
                 </ui:FilterOperationArgument>
                 <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -933,11 +925,69 @@
             </ui:FilterDataTable.SelectColumns>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:FilterDataTable>
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="628,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_170">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:FilterDataTable DataTable="[in_dt_PiccoliAcquistiSede]" DisplayName="Filter Data Table Piccoli Acquisti Sede" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[in_dt_PiccoliAcquistiSede]" SelectColumnsMode="Remove">
+                  <ui:FilterDataTable.Filters>
+                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                        <ui:FilterOperationArgument.Column>
+                          <InArgument x:TypeArguments="x:String">["NumeroFattura"]</InArgument>
+                        </ui:FilterOperationArgument.Column>
+                        <ui:FilterOperationArgument.Operand>
+                          <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("n_doc").ToString]</InArgument>
+                        </ui:FilterOperationArgument.Operand>
+                      </ui:FilterOperationArgument>
+                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                        <ui:FilterOperationArgument.Column>
+                          <InArgument x:TypeArguments="x:String">["DataFattura"]</InArgument>
+                        </ui:FilterOperationArgument.Column>
+                        <ui:FilterOperationArgument.Operand>
+                          <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("data_doc").ToString]</InArgument>
+                        </ui:FilterOperationArgument.Operand>
+                      </ui:FilterOperationArgument>
+                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                        <ui:FilterOperationArgument.Column>
+                          <InArgument x:TypeArguments="x:String">["ParIva"]</InArgument>
+                        </ui:FilterOperationArgument.Column>
+                        <ui:FilterOperationArgument.Operand>
+                          <InArgument x:TypeArguments="x:String">[Right(in_TransactionItem.SpecificContent("p_iva").ToString, 11)]</InArgument>
+                        </ui:FilterOperationArgument.Operand>
+                      </ui:FilterOperationArgument>
+                    </scg:List>
+                  </ui:FilterDataTable.Filters>
+                  <ui:FilterDataTable.SelectColumns>
+                    <scg:List x:TypeArguments="InArgument" Capacity="4">
+                      <x:Null />
+                    </scg:List>
+                  </ui:FilterDataTable.SelectColumns>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:FilterDataTable>
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
           <If Condition="[in_dt_PiccoliAcquistiSede.RowCount=1]" DisplayName="If Piccolo Acquisto Sede" sap:VirtualizedContainerService.HintSize="628,329" sap2010:WorkflowViewState.IdRef="If_50">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
